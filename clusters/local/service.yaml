@@ -6,17 +6,22 @@ metadata:
   namespace: default
   labels:
     app: python-web-app
+    environment: production
+    tier: frontend
   annotations:
     description: "Frontend service for Python web application"
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "5001"
 spec:
   selector:
     app: python-web-app
   ports:
     - name: http
       protocol: TCP
-      port: 81
+      port: 80
       targetPort: 5001
       # Optional: if you need NodePort
       # nodePort: 30080
-  sessionAffinity: None
+  sessionAffinity: ClientIP
   type: LoadBalancer
+  externalTrafficPolicy: Local
