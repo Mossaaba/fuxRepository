@@ -1,18 +1,10 @@
-# kustomization.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
-namespace: default
-
-commonLabels:
-  app: python-web-app
-  environment: local
-  managed-by: kustomize
-
-commonAnnotations:
-  description: "Python Web Application Stack"
-  maintainer: "team-name"
 
 resources:
   - service.yaml
   - deployment.yaml
+
+images:
+- name: mouss1959/flask-app
+  newTag: 1.0.2
