@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: mouss1959/app:4
+        image: mouss1959/app:5
         ports:
         - containerPort: 5001
