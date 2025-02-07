@@ -14,7 +14,7 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      port: 80
+      port: 81
       targetPort: 5001
       # Optional: if you need NodePort
       # nodePort: 30080
