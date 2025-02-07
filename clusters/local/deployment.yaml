@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: mouss1959/flask-app:latest
+        image: mouss1959/flask-app:1.0.1
         ports:
         - containerPort: 5001
