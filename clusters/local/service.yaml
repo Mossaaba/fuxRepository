@@ -18,5 +18,4 @@ spec:
       protocol: TCP
       port: 82
       targetPort: 5001
-  sessionAffinity: ClientIP
   type: ClusterIP
