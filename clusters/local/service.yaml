@@ -6,8 +6,6 @@ metadata:
   namespace: default
   labels:
     app: python-web-app
-    environment: production
-    tier: frontend
   annotations:
     description: "Frontend service for Python web application"
     prometheus.io/scrape: "true"
@@ -18,7 +16,7 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      port: 80
+      port: 82
       targetPort: 5001
   sessionAffinity: ClientIP
   type: ClusterIP

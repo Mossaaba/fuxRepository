@@ -1,19 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: python-web-app
+  name: python-web-app-ingress
+  namespace: default  # Make sure this matches your service namespace
   annotations:
+    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - host: python-app.local  # You can change this to your desired domain
+  - host: python-app.local
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: python-web-app
+            name: python-web-app  # Make sure this matches your service name
             port:
-              number: 80 
+              number: 82 
