@@ -20,8 +20,7 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 5001
-      # Optional: if you need NodePort
-      # nodePort: 30080
+      nodePort: 30080
   sessionAffinity: ClientIP
-  type: LoadBalancer
+  type: NodePort
   externalTrafficPolicy: Local
