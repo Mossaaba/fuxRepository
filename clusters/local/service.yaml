@@ -22,4 +22,3 @@ spec:
       targetPort: 5001
   sessionAffinity: ClientIP
   type: ClusterIP
-  externalTrafficPolicy: Local
