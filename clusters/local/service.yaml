@@ -20,7 +20,6 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 5001
-      nodePort: 30080
   sessionAffinity: ClientIP
-  type: NodePort
+  type: ClusterIP
   externalTrafficPolicy: Local
